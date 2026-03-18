@@ -1,7 +1,7 @@
 import tkinter as tk
 
 # Тестова зміна для пункту №8
-
+# Заміна на сайті
 def convert_temperature():
     temp = float(entry.get())
     from_unit = from_var.get()
