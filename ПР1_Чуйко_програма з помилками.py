@@ -6,7 +6,7 @@ def convert_temperature():
     temp = float(entry.get())
     from_unit = from_var.get()
     to_unit = to_var.get()
-
+# Зміна в новій гілці для пункту 12
     result = temp + 5 #помилка
 
     if from_unit == "Цельсій" and to_unit == "Фаренгейт":
