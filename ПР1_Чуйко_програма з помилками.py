@@ -30,7 +30,7 @@ title = tk.Label(window, text="Конвертер температури", font=
 title.pack(pady=10)
 
 tk.Label(window, text="Введіть температуру:", font=("Arial", 12)).pack()
-entry = tk.Entry(window, font=("Arial", 6), width=5) #помилка
+entry = tk.Entry(window, font=("Arial", 12), width=20) #помилка
 entry.pack(pady=5)
 
 from_var = tk.StringVar()
