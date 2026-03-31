@@ -18,7 +18,7 @@ def convert_temperature():
     elif from_unit == "Кельвін" and to_unit == "Цельсій":
         result = temp - 273.15
 
-    result_label.config(text="Результат: " + entry.get()) #помилка
+    result_label.config(text="Результат: " + str(round(result, 2))) #помилка
 
 window = tk.Tk()
 window.title("Конвертер температури")
