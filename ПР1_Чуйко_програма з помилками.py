@@ -44,7 +44,7 @@ tk.OptionMenu(window, from_var, "Цельсій", "Фаренгейт", "Кел�
 tk.Label(window, text="У яку одиницю:", font=("Arial", 12)).pack()
 tk.OptionMenu(window, to_var, "Цельсій", "Фаренгейт", "Кельвін").pack(pady=5)
 
-tk.Button(window, text="Конв", command=convert_temperature, font=("Arial", 12)).pack(pady=10) #помилка
+tk.Button(window, text="Конвертувати", command=convert_temperature, font=("Arial", 12)).pack(pady=10) #помилка
 
 result_label = tk.Label(window, text="", font=("Arial", 6)) #помилка
 result_label.pack()
