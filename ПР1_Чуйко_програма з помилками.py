@@ -10,7 +10,7 @@ def convert_temperature():
     result = temp + 5 #помилка
 
     if from_unit == "Цельсій" and to_unit == "Фаренгейт":
-        result = (temp * 9 / 5) + 20 # помилка
+        result = (temp * 9 / 5) + 32 # помилка
     elif from_unit == "Цельсій" and to_unit == "Кельвін":
         result = temp + 273.15
     elif from_unit == "Фаренгейт" and to_unit == "Цельсій":
