@@ -7,7 +7,7 @@ def convert_temperature():
     from_unit = from_var.get()
     to_unit = to_var.get()
 # Зміна в новій гілці для пункту 12
-    result = temp + 5 #помилка
+    result = temp  #помилка
 
     if from_unit == "Цельсій" and to_unit == "Фаренгейт":
         result = (temp * 9 / 5) + 32 # помилка
