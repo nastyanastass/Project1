@@ -1,25 +1,44 @@
 import tkinter as tk
 
-# Тестова зміна для пункту №8
-# Заміна в PyCharm
+
+#  ВИДІЛЯЄМО ЛОГІКУ (Цю частину ми будемо тестувати)
+def calculate_temperature(temp, from_unit, to_unit):
+    # Якщо одиниці однакові, повертаємо те саме число
+    if from_unit == to_unit:
+        return temp
+
+    if from_unit == "Цельсій":
+        if to_unit == "Фаренгейт":
+            return (temp * 9 / 5) + 32
+        elif to_unit == "Кельвін":
+            return temp + 273.15
+
+    elif from_unit == "Фаренгейт":
+        if to_unit == "Цельсій":
+            return (temp - 32) * 5 / 9
+
+    elif from_unit == "Кельвін":
+        if to_unit == "Цельсій":
+            return temp - 273.15
+
+    return temp
+
+
+# ОНОВЛЮЄМО ФУНКЦІЮ ДЛЯ КНОПКИ
 def convert_temperature():
-    temp = float(entry.get())
-    from_unit = from_var.get()
-    to_unit = to_var.get()
-# Зміна в новій гілці для пункту 12
-    result = temp  #помилка
+    try:
+        # Отримуємо дані з полів вводу
+        temp = float(entry.get())
+        from_unit = from_var.get()
+        to_unit = to_var.get()
 
-    if from_unit == "Цельсій" and to_unit == "Фаренгейт":
-        result = (temp * 9 / 5) + 32 # помилка
-    elif from_unit == "Цельсій" and to_unit == "Кельвін":
-        result = temp + 273.15
-    elif from_unit == "Фаренгейт" and to_unit == "Цельсій":
-        result = (temp - 32) * 5/9
-    elif from_unit == "Кельвін" and to_unit == "Цельсій":
-        result = temp - 273.15
+        # Викликаємо нашу "чисту" функцію для розрахунку
+        result = calculate_temperature(temp, from_unit, to_unit)
 
-    result_label.config(text="Результат: " + str(round(result, 2))) #помилка
-
+        # Виводимо результат
+        result_label.config(text="Результат: " + str(round(result, 2)))
+    except ValueError:
+        result_label.config(text="Помилка: введіть число!")
 window = tk.Tk()
 window.title("Конвертер температури")
 
