@@ -1,4 +1,4 @@
-# Замість старого коду з importlib пишемо просто:
+
 from Program import calculate_temperature
 
 print("Запуск тестів assert...")
